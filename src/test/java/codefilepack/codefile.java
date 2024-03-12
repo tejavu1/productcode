@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
 
 public class codefile {
 	
@@ -37,6 +38,7 @@ public class codefile {
 		
 		driver.findElement(By.id("email")).sendKeys(txtuser);
 		driver.findElement(By.id("pass")).sendKeys(txtpass);
+		Assert.assertTrue(false);
 	    
 	}
 

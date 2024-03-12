@@ -10,6 +10,8 @@ import javax.security.auth.login.Configuration;
 
 import org.apache.hc.core5.http.config.RegistryBuilder;
 
+import net.masterthought.cucumber.ReportBuilder;
+
 public class JVMReport {
 
 	public static void main(String[] args) {
@@ -23,13 +25,13 @@ public class JVMReport {
 		
           File loc =new File(System.getProperty("user.dir")+"src\\test\\resources\\reports\\JVMReports");
       
-          Configuration con ;
+        Configuration c=new Configuration(loc,"facebook");
           
           List<String> jsonfiles=new LinkedList<String>();
           
           jsonfiles.add(json);
           
-          ReportBuilder r=new ReportBuilder(jsonfiles,con);
+          ReportBuilder r=new ReportBuilder(jsonfiles, null);
           
           
 	}}
